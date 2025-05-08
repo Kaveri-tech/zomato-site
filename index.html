@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zomato Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Hero Section Background Image */
+    .hero {
+      background-image: url('https://plus.unsplash.com/premium_photo-1661432769134-758550b8fedb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+ <!-- Transparent Navbar -->
+<nav class="absolute top-0 left-0 w-full p-4 flex justify-between items-center">
+  <div class="text-white text-2xl font-bold">
+    Zomato
+  </div>
+
+  <!-- Hamburger Icon for Mobile View -->
+  <div class="lg:hidden">
+    <button id="menu-btn" class="text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Desktop Menu -->
+  <div class="hidden lg:flex space-x-6">
+    <a href="#" class="text-white hover:text-gray-300">Add Restaurant</a>
+    <a href="#" class="text-white hover:text-gray-300">Log In</a>
+    <a href="#" class="text-white hover:text-gray-300">Sign Up</a>
+  </div>
+
+  <!-- Mobile Menu (Hidden by Default) -->
+  <div id="mobile-menu" class="absolute top-16 right-4 w-auto bg-gray-800 rounded-lg p-4 space-y-2 hidden lg:hidden">
+    <a href="#" class="block text-white hover:text-gray-300">Add Restaurant</a>
+    <a href="#" class="block text-white hover:text-gray-300">Log In</a>
+    <a href="#" class="block text-white hover:text-gray-300">Sign Up</a>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <div class="hero flex flex-col justify-center items-center h-screen bg-black bg-opacity-50 text-white text-center">
+    <h1 class="text-6xl font-extrabold mb-4">ZOMATO</h1>
+    <h2 class="text-2xl font-semibold mb-6">Discover the best food & drinks in Pune</h2>
+    
+    <!-- Search Bar -->
+    <div class="w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3">
+      <input type="text" placeholder="Search for restaurants or dishes" class="w-full p-4 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-red-500">
+    </div>
+  </div>
+
+  <!-- Card Section -->
+  <div class="container mx-auto py-12">
+    <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Card 1 -->
+      <div class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=" alt="Food Image 1" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-center">Delicious Pizza</h3>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="https://static.vecteezy.com/system/resources/previews/023/010/419/non_2x/the-delicious-burger-in-the-black-background-with-ai-generated-free-photo.jpg" alt="Food Image 2" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-center">Tasty Burgers</h3>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="https://media.istockphoto.com/id/1454741285/photo/roast-fish-and-vegetable-salad-on-wooden-background.jpg?s=612x612&w=0&k=20&c=Slmk-RLvdR3317E5W2UKLul4y1ZH3axjL2XCNOBZbhE=" alt="Food Image 3" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-center">Healthy Salad</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collections Section -->
+  <div class="container mx-auto py-12">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+      <!-- Left side with Heading and Description -->
+      <div>
+        <h2 class="text-3xl font-bold">Collections</h2>
+        <p class="text-lg">Explore curated lists of top restaurants, cafes, pubs, and bars in Pune, based on trends</p>
+      </div>
+      <!-- Right side with Link -->
+      <a href="#" class="text-red-500 hover:underline text-lg mt-4 md:mt-0">All collections in Pune</a>
+    </div>
+
+    <!-- Collection Images in Flex -->
+    <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
+      <!-- Image 1 -->
+      <div class="relative">
+        <img src="https://plus.unsplash.com/premium_photo-1670984939096-f3cfd48c7408?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww" alt="Collection 1" class="w-full h-48 rounded-lg object-cover">
+        <div class="collection-img-title font-bold">Best Restaurants</div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="relative">
+        <img src="https://b.zmtcdn.com/data/collections/684397cd092de6a98862220e8cc40aca_1709810183.png" alt="Collection 2" class="w-full h-48 rounded-lg object-cover">
+        <div class="collection-img-title font-bold">Popular Cafes</div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="relative">
+        <img src="https://b.zmtcdn.com/data/collections/eb6bfce40f7b9c811b1bb127d3618097_1709810917.png" alt="Collection 3" class="w-full h-48 rounded-lg object-cover">
+        <div class="collection-img-title font-bold">Trendy Pubs</div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="relative">
+        <img src="https://cdn.sortiraparis.com/images/80/100789/834071-too-restaurant-too-hotel-paris-photos-menu-entrees.jpg" alt="Collection 4" class="w-full h-48 rounded-lg object-cover">
+        <div class="collection-img-title font-bold">Famous Bars</div>
+      </div>
+    </div>
+  </div>
+<!-- Popular Localities Section -->
+<div class="container mx-auto py-12">
+  <!-- Heading -->
+  <h2 class="text-3xl font-bold mb-6">Popular localities in and around Pune</h2>
+
+  <!-- Responsive Grid for 9 Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- City 1 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Koregaon Park</h3>
+        <p class="text-gray-500">345 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 2 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Viman Nagar</h3>
+        <p class="text-gray-500">278 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 3 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Baner</h3>
+        <p class="text-gray-500">400 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 4 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Shivaji Nagar</h3>
+        <p class="text-gray-500">320 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 5 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Kothrud</h3>
+        <p class="text-gray-500">250 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 6 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Wakad</h3>
+        <p class="text-gray-500">180 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 7 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Shivaji Nagar</h3>
+        <p class="text-gray-500">320 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 8 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Kothrud</h3>
+        <p class="text-gray-500">250 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+
+    <!-- City 9 -->
+    <div class="flex justify-between items-center border p-4 rounded-lg shadow">
+      <div>
+        <h3 class="text-xl font-semibold">Wakad</h3>
+        <p class="text-gray-500">180 places</p>
+      </div>
+      <div>
+        <span class="text-xl font-bold text-gray-400">&gt;</span> <!-- Right Arrow -->
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- ------------------------------------------------ -->
+  <!-- App Download Section -->
+<div class="bg-yellow-50 p-8 rounded-lg flex flex-col lg:flex-row items-center justify-between lg:px-52">
+  <!-- Image -->
+  <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
+    <img src="https://b.zmtcdn.com/data/o2_assets/ce5bc038a8a2d4f8f24465c8826182af1726501431.png" alt="App Promo Image" class="rounded-lg mx-auto lg:mx-0">
+  </div>
+
+  <!-- Form Section -->
+  <div class="w-full lg:w-1/2 lg:pl-8">
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center lg:text-left">Get the Zomato App</h2>
+
+    <!-- Paragraph -->
+    <p class="text-gray-700 mb-6 text-center lg:text-left">We will send you a link, open it on your phone to download the app</p>
+
+    <!-- Radio Buttons (Email and Phone) -->
+    <div class="flex items-center justify-center lg:justify-start mb-4">
+      <label class="mr-4">
+        <input type="radio" name="contactMethod" value="email" class="mr-2" checked> Email
+      </label>
+      <label>
+        <input type="radio" name="contactMethod" value="phone" class="mr-2"> Phone
+      </label>
+    </div>
+
+    <!-- Input and Button -->
+    <div class="flex items-center mb-2">
+      <input type="text" id="contactInput" placeholder="Enter email or phone" class="p-2 border border-gray-300 rounded-l-md focus:outline-none flex-grow">
+      <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-r-md">Share App Link</button>
+    </div>
+
+    <!-- Download App Text -->
+    <p class="mt-4 text-gray-700 text-center lg:text-left">Download app from</p>
+
+    <!-- App Store and Google Play Buttons -->
+    <div class="flex justify-center lg:justify-start space-x-4 mt-2">
+      <!-- Google Play Button -->
+      <a href="#" class="flex items-center bg-blue-950 border p-2 rounded-lg hover:bg-gray-200">
+        <img src="https://w7.pngwing.com/pngs/577/617/png-transparent-google-play-logo-angle-brand-yellow-media-play-angle-rectangle-triangle-thumbnail.png" alt="Google Play" class="w-6 h-6 mr-2">
+        <span>Google Play</span>
+      </a>
+
+      <!-- App Store Button -->
+      <a href="#" class="flex items-center bg-blue-950 border p-2 rounded-lg hover:bg-gray-200">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png" alt="App Store" class="w-6 h-6 mr-2">
+        <span>App Store</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- ----------------------faq----------------- -->
+
+  <!-- FAQ Section -->
+<div class="bg-white p-8 rounded-lg shadow-lg mt-10">
+    <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+  
+    <!-- Question 1 -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer(1)">
+        <h3 class="font-semibold text-lg">1. What is Zomato?</h3>
+        <span id="arrow-1" class="text-gray-700">▼</span>
+      </div>
+      <p id="answer-1" class="text-gray-700 hidden">Zomato is a global restaurant discovery and food delivery platform. Users can explore restaurants, view menus, read reviews, and order food online.</p>
+    </div>
+  
+    <!-- Question 2 -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer(2)">
+        <h3 class="font-semibold text-lg">2. How can I order food through Zomato?</h3>
+        <span id="arrow-2" class="text-gray-700">▼</span>
+      </div>
+      <p id="answer-2" class="text-gray-700 hidden">You can easily order food by searching for your desired restaurant or dish, adding items to the cart, and completing the order by providing delivery details and payment.</p>
+    </div>
+  
+    <!-- Question 3 -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer(3)">
+        <h3 class="font-semibold text-lg">3. Does Zomato offer contactless delivery?</h3>
+        <span id="arrow-3" class="text-gray-700">▼</span>
+      </div>
+      <p id="answer-3" class="text-gray-700 hidden">Yes, Zomato offers the option for contactless delivery where the delivery partner will leave your food at your door, ensuring safe and secure delivery.</p>
+    </div>
+  
+    <!-- Question 4 -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer(4)">
+        <h3 class="font-semibold text-lg">4. Can I add my restaurant to Zomato?</h3>
+        <span id="arrow-4" class="text-gray-700">▼</span>
+      </div>
+      <p id="answer-4" class="text-gray-700 hidden">Yes, restaurant owners can add their restaurant to Zomato by clicking on the "Add Restaurant" option in the menu, filling in the required details, and following the registration process.</p>
+    </div>
+  
+    <!-- Question 5 -->
+    <div>
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer(5)">
+        <h3 class="font-semibold text-lg">5. How do I contact customer support?</h3>
+        <span id="arrow-5" class="text-gray-700">▼</span>
+      </div>
+      <p id="answer-5" class="text-gray-700 hidden">You can contact Zomato's customer support through the "Help" section in the app or website, where you can submit your queries and get assistance from our support team.</p>
+    </div>
+  </div>
+  <!-- footer -->
+   <!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-10 mt-10">
+    <div class="container mx-auto flex flex-wrap justify-between">
+      <!-- Useful Links -->
+      <div class="w-full md:w-1/4 mb-6">
+        <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:text-gray-400">About Us</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-gray-400">Contact Us</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-gray-400">Privacy Policy</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-gray-400">Terms of Use</a></li>
+          <li class="mb-2"><a href="#" class="hover:text-gray-400">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="w-full md:w-1/4 mb-6">
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i> Instagram</a>
+         
+        </div>
+      </div>
+  
+      <!-- Newsletter Subscription -->
+      <div class="w-full md:w-1/4 mb-6">
+        <h3 class="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
+        <p class="mb-4">Get the latest updates and offers.</p>
+        <input type="email" placeholder="Enter your email" class="w-full p-2 rounded bg-gray-700 text-white" required>
+        <button class="mt-2 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded">Subscribe</button>
+      </div>
+  
+      <!-- App Download Links -->
+      <div class="w-full md:w-1/4 mb-6">
+        <h3 class="text-lg font-semibold mb-4">Download Our App</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="flex items-center">
+            <img src="https://w7.pngwing.com/pngs/577/617/png-transparent-google-play-logo-angle-brand-yellow-media-play-angle-rectangle-triangle-thumbnail.png" alt="Google Play" class="h-8 mr-2">
+            Google Play
+          </a>
+          <a href="#" class="flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png" alt="App Store" class="h-8 mr-2">
+            App Store
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <p class="text-sm">&copy; 2024 Zomato. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Include Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <script>
+    function toggleAnswer(questionNumber) {
+      const answer = document.getElementById(`answer-${questionNumber}`);
+      const arrow = document.getElementById(`arrow-${questionNumber}`);
+      
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        arrow.textContent = '▲'; // Change arrow to up
+      } else {
+        answer.classList.add('hidden');
+        arrow.textContent = '▼'; // Change arrow to down
+      }
+    }
+
+  
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  </script>
+  
+  
+
+</body>
+</html>
